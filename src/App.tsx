@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Greet, { increment } from './components/Greet'
+import GreetClass from './components/GreetClass'
+import { useState } from 'react'
 
-function App() {
+const App = () => {
+  let [count, setCount] = useState(0)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Well, here, my first lines of React will lie.
-          I have become everything I swore to destroy.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* 👇🏾 Changing the contents of the Greet() will need a refresh. */}
+      {Greet()}
+      {/* 👇🏾 Changing the contents of the Greet() will not need a refresh. */}
+      {/* Use this convention */}
+      <Greet />
+      {/* Welcome */}
+      <GreetClass />
+      <h1>
+        {new GreetClass({}, "version").call()}
+      </h1>
+
+      <p>You clicked {count} times!</p>
+      <button onMouseDown={() => setCount(increment(count))}>Click Me!</button>
     </div>
   );
 }
