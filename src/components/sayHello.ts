@@ -1,5 +1,5 @@
 const sayHello = (name: string): string => {
-    return `Hello ${name}`
+    return `Hello, my name is ${name}`
 }
 
 export default sayHello
