@@ -12,9 +12,18 @@ class Counter extends Component {
     }
 
     increment = () => {
-        this.setState({
-            count: this.state.count + 1
-        })
+        this.setState((prevState) => ({
+            // @ts-ignore
+            count: prevState.count + 1
+        }))
+    }
+
+    increment5 = () => {
+        this.increment()
+        this.increment()
+        this.increment()
+        this.increment()
+        this.increment()
     }
 
     render() {
@@ -22,7 +31,7 @@ class Counter extends Component {
             <div>
                 The current count is {this.state.count}
                 <br />
-                <button onClick={() => this.increment()}>Increment</button>
+                <button onClick={() => this.increment5()}>Increment</button>
             </div>
         )
     }

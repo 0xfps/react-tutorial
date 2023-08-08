@@ -16,11 +16,23 @@ class GreetClass extends Component<Props> {
     }
 
     call() {
-        return <h1>{sayHello(this.props.name)} aka {this.props.heroname} 😎!</h1>
+        return (
+            <div>
+                <h1>{sayHello(this.props.name)} aka {this.props.heroname} 😎!</h1>
+                {/* // @ts-ignore
+                {this.props.children} */}
+            </div>
+        )
     }
 
     render(): React.ReactNode {
-        return <h1>{sayHello(this.props.name)} aka {this.props.heroname} 😎!</h1>
+        return (
+            <div>
+                <h1>{sayHello(this.props.name)} aka {this.props.heroname} 😎!</h1>
+                {/* // @ts-ignore
+                {this.props.children} */}
+            </div>
+        )
     }
 }
 
