@@ -6,6 +6,11 @@ import { useState } from 'react'
 import Message from './components/Message'
 import Counter from './components/Counter'
 import SimpleCounter from './components/SimpleCounter'
+import FunctionClick from './components/FunctionClick'
+import ClassClick from './components/ClassClick'
+import ParentComponent from './components/ParentComponent';
+import UserGreeting from './components/UserGreeting';
+import NameList from './components/NameList';
 
 const App = () => {
   // let [count, setCount] = useState(0)
@@ -39,8 +44,34 @@ const App = () => {
       <GreetClass name="Barry" heroname='Flash' />
 
       <Message />
+
+      <hr />
+
       <Counter />
+
+      <hr />
+
       <SimpleCounter />
+
+      <hr />
+
+      <FunctionClick />
+
+      <hr />
+
+      <ClassClick />
+
+      <hr />
+
+      <ParentComponent />
+
+      <hr />
+
+      <UserGreeting />
+
+      <hr />
+
+      <NameList />
     </div>
   );
 }
