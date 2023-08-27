@@ -1,79 +1,21 @@
-import './App.css';
-import CreateElement from './components/CreateElement';
-import Greet, { increment } from './components/Greet'
-import GreetClass from './components/GreetClass'
-import { useState } from 'react'
-import Message from './components/Message'
-import Counter from './components/Counter'
-import SimpleCounter from './components/SimpleCounter'
-import FunctionClick from './components/FunctionClick'
-import ClassClick from './components/ClassClick'
-import ParentComponent from './components/ParentComponent';
-import UserGreeting from './components/UserGreeting';
-import NameList from './components/NameList';
+import { Component, ReactNode } from "react"
+import "./App.css"
+import FragmentsDemo from "./components/FragmentsDemo"
+import Refs from "./components/Refs"
+import FRParentInput from "./components/FRParentInput"
+import PortalDemo from "./components/PortalDemo"
 
-const App = () => {
-  // let [count, setCount] = useState(0)
-
-  return (
-    // <div className="App">
-    //   {/* 👇🏾 Changing the contents of the Greet() will need a refresh. */}
-    //   {/* {Greet()} */}
-    //   {/* 👇🏾 Changing the contents of the Greet() will not need a refresh. */}
-    //   {/* Use this convention */}
-    //   {/* <Greet /> */}
-    //   {/* Welcome */}
-    //   {/* <GreetClass /> */}
-    //   {/* <p>
-    //     {new GreetClass({}, "version").call()}
-    //   </p> */}
-
-    //   {/* <p>You clicked {count} times!</p>
-    //   <button onMouseDown={() => setCount(increment(count))}>Click Me!</button> */}
-    // </div>
-
-    <div className='App'>
-      <Greet name="Bruce" heroname='Batman'>
-        <p>This is children props</p>
-      </Greet>
-      <Greet name="Clark" heroname='Superman' />
-      <Greet name="Diana" heroname='Wonder Woman' />
-
-      <CreateElement />
-
-      <GreetClass name="Barry" heroname='Flash' />
-
-      <Message />
-
-      <hr />
-
-      <Counter />
-
-      <hr />
-
-      <SimpleCounter />
-
-      <hr />
-
-      <FunctionClick />
-
-      <hr />
-
-      <ClassClick />
-
-      <hr />
-
-      <ParentComponent />
-
-      <hr />
-
-      <UserGreeting />
-
-      <hr />
-
-      <NameList />
-    </div>
-  );
+class App extends Component {
+    render(): ReactNode {
+        return (
+            <div className="App">
+                <FragmentsDemo />
+                <Refs />
+                <FRParentInput />
+                <PortalDemo />
+            </div>
+        )
+    }
 }
 
-export default App;
+export default App
