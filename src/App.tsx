@@ -1,30 +1,22 @@
-import { Component, ReactNode } from "react"
+import { createContext } from "react"
 import "./App.css"
-import FragmentsDemo from "./components/FragmentsDemo"
-import Refs from "./components/Refs"
-import FRParentInput from "./components/FRParentInput"
-import PortalDemo from "./components/PortalDemo"
-import Hero from "./components/Hero"
-import ErrorBoundary from "./components/ErrorBoundary"
 import UseEffect from "./components/UseEffect"
-import AutoCounter from "./components/AutoCounter"
-import AutoCounterF from "./components/AutoCounterF"
-import { VariableIncrementer } from "./components/VariableIncrementer"
+import UseState from "./components/UseState"
+import UseContext from "./components/UseContext"
 
-class App extends Component {
-    render(): ReactNode {
-        return (
+export const MyContext = createContext("")
+
+const App = () => {
+    return (
+        <MyContext.Provider value="This is great!">
             <div className="App">
-                <FragmentsDemo />
-                <Refs />
-                <FRParentInput />
-                <PortalDemo />
+                <h2>Hooks</h2>
+                <UseState />
                 <UseEffect />
-                <AutoCounterF />
-                <VariableIncrementer increment={5} />
             </div>
-        )
-    }
+            <UseContext />
+        </MyContext.Provider>
+    )
 }
 
 export default App
