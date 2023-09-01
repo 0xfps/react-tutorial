@@ -1,21 +1,22 @@
-import { Component, ReactNode } from "react"
+import { createContext } from "react"
 import "./App.css"
-import FragmentsDemo from "./components/FragmentsDemo"
-import Refs from "./components/Refs"
-import FRParentInput from "./components/FRParentInput"
-import PortalDemo from "./components/PortalDemo"
+import UseEffect from "./components/UseEffect"
+import UseState from "./components/UseState"
+import UseContext from "./components/UseContext"
 
-class App extends Component {
-    render(): ReactNode {
-        return (
+export const MyContext = createContext("")
+
+const App = () => {
+    return (
+        <MyContext.Provider value="This is great!">
             <div className="App">
-                <FragmentsDemo />
-                <Refs />
-                <FRParentInput />
-                <PortalDemo />
+                <h2>Hooks</h2>
+                <UseState />
+                <UseEffect />
             </div>
-        )
-    }
+            <UseContext />
+        </MyContext.Provider>
+    )
 }
 
 export default App
