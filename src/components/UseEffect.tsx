@@ -37,7 +37,7 @@ const UseEffect = () => {
         return () => {
             window.removeEventListener("mousemove", setCoordinates)
         }
-    })
+    }, [])
 
     return (
         <div>

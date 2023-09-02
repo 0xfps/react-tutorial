@@ -3,6 +3,7 @@ import "./App.css"
 import UseEffect from "./components/UseEffect"
 import UseState from "./components/UseState"
 import UseContext from "./components/UseContext"
+import UseReducer from "./components/UseReducer"
 
 export const MyContext = createContext("")
 
@@ -15,6 +16,7 @@ const App = () => {
                 <UseEffect />
             </div>
             <UseContext />
+            <UseReducer/>
         </MyContext.Provider>
     )
 }
