@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import useDocumentTitle from "./hooks/useDocumentTitle"
+import useDocumentTitle from "../components/hooks/useDocumentTitle"
 
 const CustomHook = () => {
     const [mycounter, setCount] = useState(0)
