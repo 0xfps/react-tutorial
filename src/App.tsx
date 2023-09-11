@@ -9,6 +9,8 @@ import NoMatch from "./components/routes/NoMatch"
 import Products from "./components/routes/Products"
 import New from "./components/routes/products/New"
 import Featured from "./components/routes/products/Featured"
+import Users from "./components/routes/Users"
+import UserDetails from "./components/routes/UserDetails"
 
 export const MyContext = createContext("")
 
@@ -38,6 +40,8 @@ const App = () => {
                     <Route path="featured" element={<Featured />} />
                     <Route path="new" element={<New />} />
                 </Route>
+                <Route path="/users" element={<Users />} />
+                <Route path="/users/:userId" element={<UserDetails />} />
                 {/* "*"" Matches is no other route match the passed route. */}
                 <Route path="*" element={<NoMatch />} />
             </Routes>
