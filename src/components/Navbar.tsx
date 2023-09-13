@@ -25,6 +25,9 @@ const Navbar = () => {
             <NavLink to="/products" style={navLinkStyles}>
                 Product
             </NavLink>
+            <NavLink to="/users" style={navLinkStyles}>
+                Users
+            </NavLink>
             {/* 
                 To navigate to external links, use <a></a>.
             */}
