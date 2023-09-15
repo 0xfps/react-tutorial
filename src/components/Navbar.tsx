@@ -28,6 +28,9 @@ const Navbar = () => {
             <NavLink to="/users" style={navLinkStyles}>
                 Users
             </NavLink>
+            <NavLink to="profile" style={navLinkStyles}>
+                Profile
+            </NavLink>
             {/* 
                 To navigate to external links, use <a></a>.
             */}
